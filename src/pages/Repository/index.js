@@ -6,15 +6,15 @@ import api from '../../services/api';
 import Container from '../../components/Container';
 import { Loading, Owner, IssueList } from './styles';
 
-export default class Repository extends Component {
-  static propTypes = {
-    match: PropTypes.shape({
-      params: PropTypes.shape({
-        repository: PropTypes.string,
-      }),
-    }).isRequired,
-  };
+const propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      repository: PropTypes.string,
+    }),
+  }).isRequired,
+};
 
+export default class Repository extends Component {
   constructor(props) {
     super(props);
 
